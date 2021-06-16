@@ -14,25 +14,27 @@ Refactor based on [frida-fuzzer](https://github.com/andreafioraldi/frida-fuzzer)
 
 ## Usage
 
-### Android Device
+*In Android Device*
 
-root, and run [frida server](https://github.com/frida/frida/releases).
+* root, and run [frida server](https://github.com/frida/frida/releases).
 
-install the fuzz app like `./tests/aff-test.apk`
+* install the fuzz app like `./tests/aff-test.apk`
 
-### Host
+*In Host*
 
-install adb-tools, make sure adb commmand enable.
+* install adb-tools, make sure adb commmand enable.
 
-install python, npm.
+* install python, npm.
 
-```
+* install depends by:
+
+```shell
 make env
 ```
 
-write the fuzz target configuration file like:
+* write the fuzz target configuration file like:
 
-```
+```json
 {
   "compile": {
     "template": "native.js",
@@ -51,16 +53,22 @@ write the fuzz target configuration file like:
 }
 ```
 
-build and run
+* build js code by:
 
-```
+```shell
 make build
+```
+
+* run fuzz by:
+
+```shell
 make run
 ```
 
-will see
+you will see:
 
-```
+```shell
+
 ╰─ make run
 python fuzz.py --fuzz ./tests/config.json
  >> find target function (libaff-test.so->vul_func_buf) at 0x725a4f1e7c
