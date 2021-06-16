@@ -1,0 +1,16 @@
+{
+  "compile": {
+    "template": "native.js",
+    "target_module": "libaff-test.so",
+    "target_function": "vul_func_buf",
+    "ret_type": "int",
+    "args": [
+      {"type": "pointer", "size": 0},
+      {"type": "pbl_int", "size": 0}
+    ]
+  },
+  "fcj": "./node_modules/frida-compile/bin/compile.js",
+  "target": "com.example.aff",
+  "seeds": "./tests/seeds",
+  "script": "./tests/compiled.js"
+}

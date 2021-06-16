@@ -1,0 +1,13 @@
+{
+  "fcj": "./node_modules/frida-compile/bin/compile.js",
+  "seeds": "./tests/seeds",
+  "compile": {
+    "template": "native.js",
+    "target_module": "libwechatnormsg.so",
+    "target_function": "0x1000",
+    "ret_type": "pointer",
+    "args_types": "['int64']"
+  },
+  "target": "com.tencent.mm",
+  "script": "./tests/wechat_compiled.js"
+}

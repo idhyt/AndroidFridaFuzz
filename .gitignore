@@ -1,0 +1,11 @@
+# ignore folder
+/.python-version
+__pycache__/
+.DS_Store
+.idea/
+.vscode/
+node_modules/
+tests/
+*.json
+data/
+*.tmp
