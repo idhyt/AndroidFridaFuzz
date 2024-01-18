@@ -8,7 +8,7 @@ clean:
 
 env:
 	pip install -r requirements.txt
-	npm install --registry=https://registry.npm.taobao.org frida-compile
+	npm install --registry=https://registry.npm.taobao.org frida-compile@10.2.5
 
 build:
 	python fuzz.py --compile ./tests/config.json
